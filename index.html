@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elizabeth Pérez Contafacil | Asesoría Contable Estratégica para Pymes en Chile</title>
+  <meta name="description" content="Asesoría contable y tributaria estratégica para pymes y emprendedores en Chile. Contabilidad, F29, F22, ProPyme, análisis de rentabilidad y flujo de caja." />
+  <meta name="theme-color" content="#0b1f3b" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#f8fafc;
+      --line:#e2e8f0;
+      --brand:#0b1f3b;      /* azul profundo */
+      --accent:#d1a63a;     /* dorado suave */
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background:var(--bg)}
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.85);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .mark{
+      width:36px;height:36px;border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),#123a6d);
+      display:grid; place-items:center; color:white; font-weight:900;
+      box-shadow:var(--shadow);
+    }
+    nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    nav a{font-size:14px; color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:12px}
+    nav a:hover{background:var(--card); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:14px; text-decoration:none;
+      border:1px solid transparent; font-weight:700; font-size:14px;
+      gap:10px; white-space:nowrap;
+    }
+    .btn-primary{background:var(--brand); color:white; box-shadow:var(--shadow)}
+    .btn-primary:hover{filter:brightness(1.05)}
+    .btn-outline{background:white; border-color:var(--line); color:var(--text)}
+    .btn-outline:hover{background:var(--card)}
+    .hero{
+      padding:56px 0 26px;
+      background:
+        radial-gradient(700px 260px at 20% 0%, rgba(11,31,59,.10), transparent 60%),
+        radial-gradient(700px 260px at 90% 10%, rgba(209,166,58,.18), transparent 60%);
+    }
+    .hero-grid{
+      display:grid; gap:22px;
+      grid-template-columns: 1.1fr .9fr;
+      align-items:center;
+    }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    h1{font-size:44px; line-height:1.05; margin:0 0 14px}
+    .sub{font-size:18px; color:var(--muted); line-height:1.5; margin:0 0 20px}
+    .kpis{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .pill{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 12px; border-radius:999px;
+      background:white; border:1px solid var(--line);
+      font-size:13px; color:var(--muted);
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+    .card{
+      background:white; border:1px solid var(--line);
+      border-radius:var(--radius); padding:18px; box-shadow:var(--shadow);
+    }
+    .callout{
+      background:linear-gradient(180deg, rgba(11,31,59,.06), rgba(255,255,255,1));
+      border:1px solid var(--line);
+    }
+    .small{font-size:13px; color:var(--muted); line-height:1.45}
+    .section{padding:42px 0}
+    .section h2{font-size:28px; margin:0 0 10px}
+    .section p.lead{margin:0 0 18px; color:var(--muted); line-height:1.6}
+    .grid-3{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px){ .grid-3{grid-template-columns:1fr} }
+    .service h3{margin:0 0 8px; font-size:16px}
+    .service ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.5}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; color:var(--brand); font-weight:800;
+      background:rgba(11,31,59,.08); padding:8px 10px; border-radius:999px;
+    }
+    .pricing{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+      align-items:stretch;
+    }
+    @media (max-width: 900px){ .pricing{grid-template-columns:1fr} }
+    .price{
+      position:relative;
+      overflow:hidden;
+    }
+    .price .tag{
+      position:absolute; top:14px; right:14px;
+      background:rgba(209,166,58,.18);
+      border:1px solid rgba(209,166,58,.35);
+      color:#6b4f00;
+      font-weight:800;
+      padding:8px 10px; border-radius:999px; font-size:12px;
+    }
+    .money{font-size:30px; font-weight:900; margin:8px 0}
+    .price ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.55}
+    .price .btn{width:100%; margin-top:14px}
+    .two-col{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr 1fr;
+      align-items:start;
+    }
+    @media (max-width: 900px){ .two-col{grid-template-columns:1fr} }
+    details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 14px;
+      background:white;
+    }
+    details summary{cursor:pointer; font-weight:800}
+    details p{margin:10px 0 0; color:var(--muted); line-height:1.55}
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      background:var(--card);
+    }
+    .footer-grid{
+      display:grid; gap:12px;
+      grid-template-columns: 1.3fr .7fr;
+      align-items:start;
+    }
+    @media (max-width: 900px){ .footer-grid{grid-template-columns:1fr} }
+    .whatsapp-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:60;
+      text-decoration:none;
+      display:flex; align-items:center; gap:10px;
+      background:#25D366;
+      color:white;
+      padding:12px 14px;
+      border-radius:999px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      font-weight:900;
+      font-size:14px;
+    }
+    .whatsapp-float span{font-weight:700; opacity:.95}
+  </style>
+</head>
+
+<body>
+
+  <!-- Configuración simple -->
+  <script>
+    // WhatsApp: dejamos link con mensaje prellenado para mejorar conversión
+    window.__WA_LINK__ = "https://wa.me/56975609927?text=" + encodeURIComponent(
+      "Hola Elizabeth, vengo desde tu página y quiero una asesoría contable estratégica. ¿Podemos coordinar?"
+    );
+    window.__AGENDA_LINK__ = window.__WA_LINK__; // sin agenda, redirige a WhatsApp
+  </script>
+
+  <!-- Barra superior -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a class="logo" href="#inicio">
+          <div class="mark">Σ</div>
+          <div>
+            <div style="font-size:14px">Elizabeth Pérez Contafacil</div>
+            <div style="font-size:12px;color:var(--muted);font-weight:700">Asesoría Contable Estratégica</div>
+          </div>
+        </a>
+
+        <nav aria-label="Navegación">
+          <a href="#servicios">Servicios</a>
+          <a href="#planes">Planes</a>
+          <a href="#metodo">Cómo trabajo</a>
+          <a href="#faq">Preguntas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a class="btn btn-primary" href="#" id="btnAgendarTop" rel="noopener">
+          Agendar asesoría
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="inicio" class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+
+        <section>
+          <div class="badge">Pymes y emprendedores en Chile 🇨🇱 • Atención 100% online</div>
+          <h1>Convierte tus números en decisiones inteligentes (y haz crecer tu negocio)</h1>
+          <p class="sub">
+            Soy <strong>Elizabeth Pérez Contafacil</strong>, contadora con enfoque estratégico.
+            Te acompaño con cumplimiento SII <strong>sin estrés</strong> y análisis de rentabilidad, flujo de caja
+            y oportunidades de mejora.
+          </p>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="#" id="btnWhatsHero" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-outline" href="#planes">Ver planes</a>
+          </div>
+
+          <div class="kpis" aria-label="Beneficios">
+            <div class="pill"><span class="dot"></span> ProPyme • F29 • F22</div>
+            <div class="pill"><span class="dot"></span> Reportes simples y útiles</div>
+            <div class="pill"><span class="dot"></span> Isla de Maipo • Online</div>
+          </div>
+
+          <p class="small" style="margin-top:12px">
+            * Si ya tienes todo en orden: perfecto. Si estás atrasado/a: también te ayudo a regularizar.
+          </p>
+        </section>
+
+        <aside class="card callout">
+          <h3 style="margin:0 0 8px">Asesoría inicial (20–30 min)</h3>
+          <p class="small" style="margin:0 0 14px">
+            Ideal para entender tu situación actual y definir el plan correcto:
+            régimen, obligaciones, riesgos y próximos pasos.
+          </p>
+
+          <div class="card" style="box-shadow:none; border-color:var(--line); background:white">
+            <p style="margin:0 0 10px; font-weight:900">¿Qué revisamos?</p>
+            <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6">
+              <li>Régimen y obligaciones (SII)</li>
+              <li>Orden documental y contable</li>
+              <li>Riesgos de multas / atrasos</li>
+              <li>Oportunidades para mejorar resultados</li>
+            </ul>
+          </div>
+
+          <a class="btn btn-primary" style="margin-top:14px; width:100%" href="#" id="btnAgendarCard" rel="noopener">
+            Agendar ahora
+          </a>
+
+          <p class="small" style="margin:10px 0 0">
+            Respondo de lunes a viernes. Atención online para todo Chile.
+          </p>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section">
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <p class="lead">Cumplimiento + estrategia. Lo que necesitas para crecer con orden y tranquilidad.</p>
+
+      <div class="grid-3">
+        <div class="card service">
+          <h3>📊 Gestión contable mensual</h3>
+          <p class="small">Orden, registro y cierres para que tu información sirva para decidir.</p>
+          <ul>
+            <li>Registro contable y cierre mensual</li>
+            <li>Estados financieros claros</li>
+            <li>Reportes simples (sin tecnicismos)</li>
+          </ul>
+        </div>
+
+        <div class="card service">
+          <h3>🧾 Tributaria (SII)</h3>
+          <p class="small">Evita multas y toma decisiones con planificación.</p>
+          <ul>
+            <li>Declaración mensual F29</li>
+            <li>Declaración anual F22</li>
+            <li>ProPyme y cumplimiento</li>
+            <li>Regularización de atrasos</li>
+          </ul>
+        </div>
+
+        <div class="card service">
+          <h3>🚀 Asesoría para crecimiento</h3>
+          <p class="small">Tu contabilidad como herramienta para mejorar rentabilidad.</p>
+          <ul>
+            <li>Análisis de márgenes y costos</li>
+            <li>Flujo de caja y proyecciones</li>
+            <li>Plan de mejoras y seguimiento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section id="planes" class="section" style="background:var(--card)">
+    <div class="wrap">
+      <h2>Planes mensuales</h2>
+      <p class="lead">Diseñados para pymes que quieren orden y crecimiento. Valores referenciales (se ajustan según volumen y complejidad).</p>
+
+      <div class="pricing">
+        <div class="card price">
+          <div class="tag">Inicio ordenado</div>
+          <h3 style="margin:0">Plan Base</h3>
+          <div class="money">Desde $120.000</div>
+          <p class="small" style="margin:0">Para emprendimientos y pymes con necesidades estándar.</p>
+          <ul>
+            <li>Contabilidad mensual</li>
+            <li>F29 mensual</li>
+            <li>Soporte por WhatsApp</li>
+            <li>Checklist de cumplimiento</li>
+          </ul>
+          <a class="btn btn-outline" href="#" id="btnPlanBase" rel="noopener">Quiero este plan</a>
+        </div>
+
+        <div class="card price" style="border-width:2px; border-color: rgba(11,31,59,.25)">
+          <div class="tag">Más recomendado</div>
+          <h3 style="margin:0">Plan Crecimiento</h3>
+          <div class="money">Desde $220.000</div>
+          <p class="small" style="margin:0">Para pymes que buscan mejorar resultados y decisiones.</p>
+          <ul>
+            <li>Todo el Plan Base</li>
+            <li>Estados financieros mensuales</li>
+            <li>Reunión estratégica mensual (30 min)</li>
+            <li>Análisis de rentabilidad + alertas</li>
+          </ul>
+          <a class="btn btn-primary" href="#" id="btnPlanCrec" rel="noopener">Agendar diagnóstico</a>
+        </div>
+
+        <div class="card price">
+          <div class="tag">Expansión</div>
+          <h3 style="margin:0">Plan Estratégico</h3>
+          <div class="money">Desde $450.000</div>
+          <p class="small" style="margin:0">Para empresas con mayor movimiento y objetivos claros de crecimiento.</p>
+          <ul>
+            <li>Planeación tributaria</li>
+            <li>Proyecciones y flujo de caja</li>
+            <li>Acompañamiento continuo</li>
+            <li>Reuniones y reportes avanzados</li>
+          </ul>
+          <a class="btn btn-outline" href="#" id="btnPlanEstr" rel="noopener">Cotizar este plan</a>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:12px">
+        Nota: si tu caso requiere nómina, rectificatorias o servicios puntuales, se cotiza por separado.
+      </p>
+    </div>
+  </section>
+
+  <!-- METODO -->
+  <section id="metodo" class="section">
+    <div class="wrap">
+      <h2>Cómo trabajo contigo</h2>
+      <p class="lead">Un proceso simple, claro y con foco en resultados (no solo “hacer la declaración”).</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 style="margin:0 0 8px">1) Diagnóstico</h3>
+          <p class="small" style="margin:0">
+            Revisamos régimen, obligaciones, orden documental, atrasos y prioridades. Definimos el plan correcto.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">2) Orden y cumplimiento</h3>
+          <p class="small" style="margin:0">
+            Implementamos rutina mensual: cierre, F29, reportes y trazabilidad para que todo esté en regla.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">3) Estrategia de crecimiento</h3>
+          <p class="small" style="margin:0">
+            Analizamos rentabilidad y flujo de caja. Te entrego acciones concretas para mejorar resultados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section class="section" style="background:var(--card)">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="card">
+          <h2 style="margin:0 0 10px">Hola, soy Elizabeth Pérez</h2>
+          <p class="lead" style="margin:0">
+            Contadora con enfoque en pymes y emprendedores en Chile. Mi objetivo es que entiendas tus números,
+            cumplas con el SII sin estrés y tomes decisiones con claridad.
+          </p>
+          <p class="small" style="margin:12px 0 0">
+            Trabajo 100% online desde <strong>Isla de Maipo</strong>. Nada de informes eternos: reportes simples y conversaciones directas.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Lo que puedes esperar</h3>
+          <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.75">
+            <li><strong>Claridad:</strong> te explico en simple (sin jerga).</li>
+            <li><strong>Orden:</strong> procesos y checklist mensual para evitar sorpresas.</li>
+            <li><strong>Estrategia:</strong> foco en rentabilidad, flujo y decisiones.</li>
+            <li><strong>Respuesta:</strong> soporte por WhatsApp y comunicación directa.</li>
+          </ul>
+          <a class="btn btn-primary" style="margin-top:14px; width:100%" href="#" id="btnWhatsAbout" rel="noopener">
+            Hablemos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="wrap">
+      <h2>Preguntas frecuentes</h2>
+      <p class="lead">Si te queda alguna duda, escríbeme y la resolvemos.</p>
+
+      <div class="two-col">
+        <details>
+          <summary>¿Trabajas 100% online?</summary>
+          <p>Sí. Atiendo a clientes en todo Chile. La documentación y seguimiento se hace por canales digitales.</p>
+        </details>
+
+        <details>
+          <summary>¿Incluyes F29 y F22?</summary>
+          <p>Dependiendo del plan y tu situación. En general, F29 es mensual y F22 anual. Se confirma en el diagnóstico.</p>
+        </details>
+
+        <details>
+          <summary>¿Tomas casos con atrasos?</summary>
+          <p>Sí. Podemos regularizar, ordenar documentación y establecer un plan para volver a estar al día.</p>
+        </details>
+
+        <details>
+          <summary>¿Puedo contratar solo una asesoría puntual?</summary>
+          <p>Claro. También hago sesiones puntuales de diagnóstico, revisión de régimen, flujo de caja y orden contable.</p>
+        </details>
+
+        <details>
+          <summary>¿Cómo empezamos?</summary>
+          <p>Escríbeme por WhatsApp y coordinamos. Revisamos tu caso y te envío propuesta clara de trabajo.</p>
+        </details>
+
+        <details>
+          <summary>¿Qué necesito para cotizar?</summary>
+          <p>Rubro, nivel de facturación aproximado, cantidad de documentos/mes y régimen SII (si lo sabes). Si no, lo vemos juntas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section" style="background:var(--card)">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="card">
+          <h2 style="margin:0 0 10px">¿Lista/o para ordenar y crecer?</h2>
+          <p class="lead" style="margin:0 0 14px">
+            Escríbeme y coordinamos una asesoría inicial para definir el plan correcto y avanzar con claridad.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="#" id="btnAgendarContact" rel="noopener">Agendar por WhatsApp</a>
+            <a class="btn btn-outline" href="mailto:eperez.9garc@gmail.com">Enviar correo</a>
+          </div>
+          <p class="small" style="margin:12px 0 0">
+            Correo: <a href="mailto:eperez.9garc@gmail.com">eperez.9garc@gmail.com</a><br/>
+            Atención: Online • Chile (base: Isla de Maipo)
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Checklist rápido (gratis)</h3>
+          <p class="small" style="margin:0 0 14px">
+            Te envío un checklist para ordenar tus finanzas del mes (ideal para pymes).
+            Escríbeme “CHECKLIST” por WhatsApp y te lo mando.
+          </p>
+          <a class="btn btn-primary" style="width:100%" href="#" id="btnChecklist" rel="noopener">
+            Pedir checklist por WhatsApp
+          </a>
+          <p class="small" style="margin:12px 0 0">
+            Esto te ayuda a atraer clientes sin descuentos y con mejor perfil.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="mark">Σ</div>
+            <div>
+              <div style="font-weight:900">Elizabeth Pérez Contafacil</div>
+              <div class="small">Asesoría Contable Estratégica • Chile</div>
+            </div>
+          </div>
+          <p class="small" style="margin:10px 0 0">
+            © <span id="year"></span> Elizabeth Pérez Contafacil. Todos los derechos reservados.
+          </p>
+        </div>
+
+        <div>
+          <p class="small" style="margin:0 0 8px"><strong>Enlaces</strong></p>
+          <p class="small" style="margin:0; line-height:1.9">
+            <a href="#servicios">Servicios</a> ·
+            <a href="#planes">Planes</a> ·
+            <a href="#faq">Preguntas</a> ·
+            <a href="#contacto">Contacto</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-float" href="#" id="btnWhatsFloat" rel="noopener" aria-label="Contactar por WhatsApp">
+    💬 <span>WhatsApp</span>
+  </a>
+
+  <script>
+    // Set year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Wire all WhatsApp/agenda buttons
+    const wa = window.__WA_LINK__;
+    const agenda = window.__AGENDA_LINK__;
+
+    const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.href = href; };
+
+    setHref("btnAgendarTop", agenda);
+    setHref("btnWhatsHero", wa);
+    setHref("btnAgendarCard", agenda);
+
+    setHref("btnPlanBase", "https://wa.me/56975609927?text=" + encodeURIComponent("Hola Elizabeth, me interesa el Plan Base. ¿Me cuentas qué necesitas para cotizar según mi caso?"));
+    setHref("btnPlanCrec", "https://wa.me/56975609927?text=" + encodeURIComponent("Hola Elizabeth, me interesa el Plan Crecimiento. ¿Podemos coordinar un diagnóstico para ver mi situación?"));
+    setHref("btnPlanEstr", "https://wa.me/56975609927?text=" + encodeURIComponent("Hola Elizabeth, me interesa el Plan Estratégico. ¿Podemos cotizarlo según mi negocio y volumen?"));
+
+    setHref("btnWhatsAbout", wa);
+    setHref("btnAgendarContact", agenda);
+    setHref("btnChecklist", "https://wa.me/56975609927?text=" + encodeURIComponent("Hola Elizabeth, CHECKLIST 🙂 Me gustaría que me envíes el checklist para ordenar mis finanzas del mes."));
+
+    setHref("btnWhatsFloat", wa);
+  </script>
+</body>
+</html>
